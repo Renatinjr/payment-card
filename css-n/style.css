@@ -1,0 +1,108 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-color-light: #fff;
+}
+html,
+body {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(62, 62, 70, 0.667);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-image: linear-gradient(to bottom, #8d8686, rgb(54, 56, 59));
+  width: calc(45rem - 2vw);
+  height: 25rem;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+.card .card__data {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card__data img {
+  width: 4rem;
+}
+.card .card__data .card__data__numbers {
+  font-size: clamp(1.6rem, 2.7rem, 2.9rem);
+  color: var(--font-color-light);
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card__data__valid-date {
+  color: var(--font-color-light);
+  margin-top: 1.2rem;
+}
+.card .card__data .card__data__valid-date__heading {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+.card .card__data .card__data__valid-date .card__data__valid-date__container {
+  font-size: 1.5rem;
+}
+.card__data__owner {
+  width: 80%;
+  margin-top: 1.3rem;
+}
+.card__data__owner__name {
+  color: var(--font-color-light);
+  font-size: clamp(1.2rem, 1.6rem + 1vw, 2rem);
+  text-transform: uppercase;
+}
+.input-data {
+  width: calc(45rem - 2vw);
+}
+.input-data form {
+  display: flex;
+  flex-direction: column;
+}
+.input-data__card-numbers {
+  width: 80%;
+  margin: 0.7rem 0;
+}
+.input-data__card-validity {
+  width: 25%;
+  margin-bottom: 0.7rem;
+}
+.input-data__card-owner {
+  width: 80%;
+  margin-bottom: 0.7rem;
+}
+
+input {
+  padding: 0.3rem 0.4rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+input:focus {
+  outline: 1px solid rgb(81, 156, 72);
+}
+
+.input-data__btn-submit {
+  align-self: left;
+  width: calc(15rem + 1.5vw);
+  padding: 0.5rem 0.3rem;
+  background-image: linear-gradient(to right, #41c1a7, #86cda1 50%);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
